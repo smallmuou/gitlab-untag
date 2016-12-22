@@ -20,8 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-set -e
-
 spushd() {
      pushd "$1" 2>&1> /dev/null
 }
@@ -88,10 +86,10 @@ fi
 
 info "Delete tag $tagname ..."
 
+git tag -d $tagname
 git push $repository --delete tag $tagname
 git tag __tmp__
 git push $repository --tags
 git tag -d __tmp__
 git push $repository --delete tag __tmp__
 
-git tag -d $tagname
