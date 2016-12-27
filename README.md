@@ -18,3 +18,13 @@ or
 ./gitlab-untag.sh origin 测试1
 
 </pre>
+
+
+
+远端执行:
+
+<pre>
+curl -s https://raw.githubusercontent.com/smallmuou/gitlab-untag/master/gitlab-untag.sh|/bin/bash -s 仓库名 标签名
+</pre>
+
+PS: 缺省仓库名为origin
